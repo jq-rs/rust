@@ -17,7 +17,7 @@ fn main() {
         static _F2: unsafe extern "C" fn(*mut *mut c_void, usize, usize) -> c_int =
             libmimalloc_sys::mi_posix_memalign;
         #[used]
-        static _F3: unsafe extern "C" fn(usize, usize) -> *mut c_void = libmimalloc_sys::mi_malloc_aligned;
+        static _F3: unsafe extern "C" fn(usize, usize) -> *mut c_void = libmimalloc_sys::mi_aligned_alloc;
         #[used]
         static _F4: unsafe extern "C" fn(usize) -> *mut c_void = libmimalloc_sys::mi_malloc;
         #[used]
